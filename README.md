@@ -16,7 +16,6 @@ What we want to know:
 
 Or use the embedded player below:
 
-<audio controls>
-  <source src="audio/xtts_empty_story.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+
+https://github.com/GronlunE/Voice-cloning-analysis/assets/48357158/405a2e2e-1754-4868-aa66-00ff9810cd1f
+
