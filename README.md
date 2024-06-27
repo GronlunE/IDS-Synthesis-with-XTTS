@@ -12,7 +12,7 @@ What we want to know:
 2. Does the prosody of infant-directed speech (IDS) transfer to synthesis, and does the noise transfer as well? Does the prosody change if the reference IDS sample is replaced with another from the same speaker, etc?
 3. Does the prosody transfer if the reference audio is cleaned, either by machine learning or filtering?
 
-[Listen to the audio file](audio/sample.mp3)
+[Listen to the audio file](audio/xtts_empty_story.wav)
 
 Or use the embedded player below:
 
