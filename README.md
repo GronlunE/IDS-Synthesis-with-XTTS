@@ -17,6 +17,6 @@ What we want to know:
 Or use the embedded player below:
 
 <audio controls>
-  <source src="audio/sample.mp3" type="audio/mpeg">
+  <source src="audio/xtts_empty_story.wav" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
