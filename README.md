@@ -1,7 +1,10 @@
 # Voice-cloning-Analysis
 Analysing the voice cloning capabilities of a TTS model
 
-How to measure: auditory perception (speech style, speaker identity, noisiness), Praat analysis (intonation).
+How to measure: 
+
+1. Auditory perception (speech style, speaker identity, noisiness)
+2. Praat analysis (intonation).
 
 What we want to know:
 
