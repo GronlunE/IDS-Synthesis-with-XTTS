@@ -17,5 +17,5 @@ What we want to know:
 Or use the embedded player below:
 
 
-https://github.com/GronlunE/Voice-cloning-analysis/assets/48357158/405a2e2e-1754-4868-aa66-00ff9810cd1f
+https://github.com/GronlunE/Voice-cloning-analysis/audio/xtts_empty_story.mp4
 
