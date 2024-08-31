@@ -36,7 +36,7 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 ## Examples
 
-[Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced.
+[Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced. [Example audio source](https://www.youtube.com/watch?v=F9qS_AZCdgM)
 
 ### References:
 
