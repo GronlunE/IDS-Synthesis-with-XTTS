@@ -1,7 +1,7 @@
-# IDS-Synthesis-with-XTTS
+### IDS-Synthesis-with-XTTS
 Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 
-# Installation:
+## Installation:
 
 1. Clone repository and install: https://github.com/orasanen/thetaOscillator/blob/master/thetaseg.m into "thetaOscillator" folder and follow the instructions there for installation.
    The matlab version was used here.
@@ -26,9 +26,31 @@ To synthesize data from own samples (untested might not work):
 5. ????
 6. Maybe it works.
 
-# Project description
+## Project description
 
 Project intention is to attempt to use a XTTS model to synthesize IDS from IDS references, even if it was not specifically designed to do be able to do so. 
 The IDS references used were of poor quality so model from https://github.com/resemble-ai/resemble-enhance was used to clean up audio, with their "denoise" and "enhance" functionalities
-Then the synthesized and reference audio had chosen relevant prosodic and quality features extracted. Figures were then drawn from the extracted statistics. Figure type currently used are scatter + ellipse fitting to mean and standart deviation
-and kdes from density functions.
+Then the synthesized and reference audio had chosen relevant prosodic and quality features extracted. Figures were then drawn from the extracted statistics. Figure type currently used are scatter + ellipse fitting to mean and standart deviation, kdes from density functions and radar plots of all statistics together. Comparison base was using the Original IDS reference against the syntheses of all orginal, denoised and enhanced.
+
+## Examples
+
+# References:
+
+Orignal IDS:
+Enhanced IDS:
+Denoised IDS:
+
+# Syntheses:
+
+Orignal IDS:
+Enhanced IDS:
+Denoised IDS:
+
+# Figures
+
+Scatter:
+KDE of Density:
+Radar:
+
+
+
