@@ -41,10 +41,8 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 ## References:
 
 - **Original IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_original.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+https://github.com/user-attachments/assets/4cb94a65-e767-4b6b-8b07-b9796e1be336
 
 - **Enhanced IDS:**
   <video width="320" height="240" controls>
