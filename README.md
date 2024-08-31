@@ -1,4 +1,4 @@
-# Voice-cloning-Analysis
+# IDS-Synthesis-with-XTTS
 Analysing the voice cloning capabilities of a TTS model
 
 How to measure: 
