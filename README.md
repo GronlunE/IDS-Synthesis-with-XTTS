@@ -36,20 +36,6 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 ## Examples
 
-[Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced. [Example audio source](https://www.youtube.com/watch?v=F9qS_AZCdgM)
-
-## References:
-
-- **Original IDS:** [Play Original IDS](examples/IDS_example_original.mp4)
-- **Enhanced IDS:** [Play Enhanced IDS](examples/IDS_example_enhanced.mp4)
-- **Denoised IDS:** [Play Denoised IDS](examples/IDS_example_denoised.mp4)
-
-## Syntheses:
-
-- **Original IDS:** [Play Original IDS](examples/xtts_IDS_example_original_GILES_1.mp4)
-- **Enhanced IDS:** [Play Enhanced IDS](examples/xtts_IDS_example_enhanced_GILES_1.mp4)
-- **Denoised IDS:** [Play Denoised IDS](examples/xtts_IDS_example_denoised_GILES_1.mp4)
-
 ### Figures
 
 - **Scatter Plot:**
