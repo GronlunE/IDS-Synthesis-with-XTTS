@@ -1,5 +1,5 @@
 # IDS-Synthesis-with-XTTS
-Analyzing the IDS (Infant-Directed Speech) cloning capabilities of a TTS model
+Analyzing the IDS (Infant-Directed Speech) synthesizing capabilities of a TTS model
 
 ## Installation:
 ### Start here
