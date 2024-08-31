@@ -2,29 +2,38 @@
 Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 
 ## Installation:
+### Start
+
 
 1. Clone repository and install: https://github.com/orasanen/thetaOscillator/blob/master/thetaseg.m into "thetaOscillator" folder and follow the instructions there for installation.
    The matlab version was used here.
 
-To get the same data the figures located in "figures" folder was used to create:
+
+### To get the same data the figures located in "figures" folder was used to create:
+
 
 2. From .zip file (provided externally) extract the content of references into "references", synthesised into "synthesised" and texts into "texts" folders under "synthesis_stage".
 3. Run statistics.py
 4. Run display.py
 
-To synthesize the data which was used to create the figures in "figures" folder:
+
+### To synthesize the data which was used to create the figures in "figures" folder:
+
 
 2. Extract From .zip file (provided externally) extract the content of references into "references" and texts into "texts" folder under "synthesis_stage".
 3. Install https://github.com/coqui-ai/TTS by following their insructions for installation. "XTTS" folder can be used to store the model(s).
 4. Run synthesizer.py
 
-To synthesize data from own samples (untested might not work):
+
+### To synthesize data from own samples (untested might not work):
+
 
 2. Extract your references into the "original" folder under "synthesis_stage/references" and texts into the "texts" folder under "synthesis_stage"
 3. Install https://github.com/coqui-ai/TTS by following their insructions for installation. "XTTS" folder can be used to store the model(s).
 4. Run synthesizer.py
 5. ????
 6. Maybe it works.
+
 
 ## Project description
 
