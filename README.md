@@ -1,11 +1,11 @@
 # IDS-Synthesis-with-XTTS
-Analyzing the IDS (Infant-Directed Speech) cloning capabilities of a TTS model
+Analyzing the IDS (Infant-Directed Speech) synthesizing capabilities of a TTS model
 
 ## Installation:
 ### Start here
 
 1. Clone the repository and install [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master) into the "thetaOscillator" folder and follow the instructions provided there for installation. The MATLAB version was used here. The environment variable does not contain TTS.
-2. Matlabengine is required to one function to use [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master), and that should be installed according to [MATLAB Engine for Python Installation Instructions](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html) Other option would be to modify 'get_syllable_duration_statistics' function to work without this or simply load precalculated values.
+2. Matlabengine is required to one function to use [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master), and that should be installed according to [MATLAB Engine for Python Installation Instructions](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html). Other options would be to modify 'get_syllable_duration_statistics' function to work without this or simply load precalculated values.
 
 ### ONLY EXTRACT DATA ->
 
@@ -36,19 +36,19 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 ## Examples
 
-[Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced.
+[Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced. [Example audio source](https://www.youtube.com/watch?v=F9qS_AZCdgM)
 
-### References:
+## References:
 
-- Original IDS:
-- Enhanced IDS:
-- Denoised IDS:
+- **Original IDS:** [Play Original IDS](examples/IDS_example_original.mp4)
+- **Enhanced IDS:** [Play Enhanced IDS](examples/IDS_example_enhanced.mp4)
+- **Denoised IDS:** [Play Denoised IDS](examples/IDS_example_denoised.mp4)
 
-### Syntheses:
+## Syntheses:
 
-- Original IDS:
-- Enhanced IDS:
-- Denoised IDS:
+- **Original IDS:** [Play Original IDS](examples/xtts_IDS_example_original_GILES_1.mp4)
+- **Enhanced IDS:** [Play Enhanced IDS](examples/xtts_IDS_example_enhanced_GILES_1.mp4)
+- **Denoised IDS:** [Play Denoised IDS](examples/xtts_IDS_example_denoised_GILES_1.mp4)
 
 ### Figures
 
