@@ -42,39 +42,29 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 - **Original IDS:**
 
-https://github.com/user-attachments/assets/4cb94a65-e767-4b6b-8b07-b9796e1be336
+https://github.com/user-attachments/assets/9bdf8f6a-3642-4512-ae9b-fb93295dc2d4
 
 - **Enhanced IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_enhanced.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+https://github.com/user-attachments/assets/dc57c506-9eb1-487f-b394-5ddfadc3f90e
 
 - **Denoised IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_denoised.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+https://github.com/user-attachments/assets/5ae9e06c-49e3-4232-b282-4a01952185ff
 
 ## Syntheses:
 
 - **Original IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_original_GILES_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+https://github.com/user-attachments/assets/531200fb-dfd2-4d78-a4a3-bd8d302c1cb0
 
 - **Enhanced IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+https://github.com/user-attachments/assets/0afd9964-d48c-4781-b17d-473e0751a1fb
 
 - **Denoised IDS:**
-  <video width="320" height="240" controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_denoised_GILES_1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  
+https://github.com/user-attachments/assets/7814695c-132c-47d1-bb8f-413a7d08e3f8
 
 ### Figures
 
