@@ -40,15 +40,43 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 ## References:
 
-- **Original IDS:** [Play Original IDS](examples/IDS_example_original.mp4)
-- **Enhanced IDS:** [Play Enhanced IDS](examples/IDS_example_enhanced.mp4)
-- **Denoised IDS:** [Play Denoised IDS](examples/IDS_example_denoised.mp4)
+- **Original IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_original.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Enhanced IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_enhanced.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Denoised IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_denoised.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
 ## Syntheses:
 
-- **Original IDS:** [Play Original IDS](examples/xtts_IDS_example_original_GILES_1.mp4)
-- **Enhanced IDS:** [Play Enhanced IDS](examples/xtts_IDS_example_enhanced_GILES_1.mp4)
-- **Denoised IDS:** [Play Denoised IDS](examples/xtts_IDS_example_denoised_GILES_1.mp4)
+- **Original IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_original_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Enhanced IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Denoised IDS:**
+  <audio controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_denoised_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
 ### Figures
 
