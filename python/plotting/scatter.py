@@ -1,6 +1,24 @@
 """
+Created on 31.8. 2024
 
+@author: GronlunE
+
+Description:
+
+This script generates scatter plots to visualize and compare acoustic measurements from synthesized and reference data. It includes the following functionalities:
+- `add_ellipse`: Adds an ellipse to a scatter plot based on the covariance of the data points.
+- `draw_scatter_plot`: Creates scatter plots to visualize synthesized and reference data, and overlays ellipses to represent data distributions.
+- `plot_scatters`: Main function to load data, process it, and generate scatter plots for various variables.
+
+Dependencies:
+- `pandas` for data manipulation.
+- `matplotlib` for plotting.
+- `numpy` for numerical operations.
+- `scipy` for statistical functions.
+
+The "GILES" in the code refers to GILES generated text samples.
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
@@ -10,14 +28,14 @@ from scipy.stats import chi2
 
 def add_ellipse(ax, x_data, y_data, color, linestyle, label=None):
     """
+    Add an ellipse to the plot representing the covariance of the data points.
 
-    :param ax:
-    :param x_data:
-    :param y_data:
-    :param color:
-    :param linestyle:
-    :param label:
-    :return:
+    :param ax: Matplotlib axis object where the ellipse will be added.
+    :param x_data: Array-like, x coordinates of the data points.
+    :param y_data: Array-like, y coordinates of the data points.
+    :param color: Color of the ellipse.
+    :param linestyle: Style of the ellipse line (e.g., '--', '-').
+    :param label: Optional label to annotate the ellipse.
     """
     if len(x_data) < 2 or len(y_data) < 2:
         return  # Not enough data to draw an ellipse
@@ -53,24 +71,24 @@ def add_ellipse(ax, x_data, y_data, color, linestyle, label=None):
 
 def draw_scatter_plot(x_var, y_var, var_name, color_map, synthesized_df, references_df, categories, n_categories, giles_color_map, giles_numbers, giles_colors, colors):
     """
+    Generate scatter plots comparing synthesized and reference data, including ellipses to represent data distributions.
 
-    :param x_var:
-    :param y_var:
-    :param var_name:
-    :param color_map:
-    :param synthesized_df:
-    :param references_df:
-    :param categories:
-    :param n_categories:
-    :param giles_color_map:
-    :param giles_numbers:
-    :param giles_colors:
-    :param colors:
-    :return:
+    :param x_var: Name of the column to plot on the x-axis.
+    :param y_var: Name of the column to plot on the y-axis.
+    :param var_name: Identifier for the variable being plotted, used in the output file name.
+    :param color_map: Dictionary mapping categories to colors.
+    :param synthesized_df: DataFrame containing synthesized data.
+    :param references_df: DataFrame containing reference data.
+    :param categories: List of categories for plotting.
+    :param n_categories: Number of unique categories.
+    :param giles_color_map: Dictionary mapping GILES numbers to colors.
+    :param giles_numbers: List of unique GILES numbers.
+    :param giles_colors: List of colors corresponding to GILES numbers.
+    :param colors: List of colors for plotting categories.
     """
-    # Plot 1: Synthesized Data - X vs. Y by Category
     plt.figure(figsize=(18, 12))
 
+    # Plot 1: Synthesized Data - X vs. Y by Category
     plt.subplot(2, 2, 1)
     for category, color in color_map.items():
         category_data = synthesized_df[synthesized_df['category'] == category]
@@ -134,7 +152,7 @@ def draw_scatter_plot(x_var, y_var, var_name, color_map, synthesized_df, referen
         if not cat_synth_data.empty:
             plt.scatter(cat_synth_data[x_var], cat_synth_data[y_var], color=color, marker='o', alpha=0,
                         label=f"{category} (Synthesized)")
-            add_ellipse(plt.gca(), cat_synth_data[x_var], cat_synth_data[y_var], color, linestyle='--',)
+            add_ellipse(plt.gca(), cat_synth_data[x_var], cat_synth_data[y_var], color, linestyle='--')
 
         if not cat_concat_data.empty:
             plt.scatter(cat_concat_data[x_var], cat_concat_data[y_var], color=color, marker='x', alpha=0,
@@ -161,8 +179,13 @@ def draw_scatter_plot(x_var, y_var, var_name, color_map, synthesized_df, referen
 
 def plot_scatters():
     """
+    Load data, process it, and generate scatter plots for various acoustic measurements.
 
-    :return:
+    This function performs the following steps:
+    1. Load synthesized and reference data from CSV files.
+    2. Extract categories and GILES numbers from file names.
+    3. Define color maps for categories and GILES numbers.
+    4. Plot scatter plots for different variables using the `draw_scatter_plot` function.
     """
     # Load synthesized data
     synthesized = r"plot_data/scatter/synthesized.csv"
@@ -205,7 +228,7 @@ def plot_scatters():
     # Convert categories to color codes for concatenated data
     references_df['color'] = references_df['category'].map(color_map)
 
-    # Your variables as a dictionary
+    # Variables to plot
     variables = {
         'f0': ('f0_sd', 'f0_mean'),
         'f0_delta': ('f0_delta_sd', 'f0_delta_mean'),
@@ -213,6 +236,6 @@ def plot_scatters():
         'syllable_duration': ('syllable_duration_sd', 'syllable_duration_mean')
     }
 
-    # Loop through the dictionary and plot
+    # Generate scatter plots for each variable
     for var_name, (x_var, y_var) in variables.items():
         draw_scatter_plot(x_var, y_var, var_name,  color_map, synthesized_df, references_df, categories, n_categories, giles_color_map, giles_numbers, giles_colors, colors)

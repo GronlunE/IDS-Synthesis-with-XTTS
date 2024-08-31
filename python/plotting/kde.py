@@ -1,3 +1,31 @@
+"""
+Created on 31.8. 2024
+
+@author: GronlunE
+
+Description:
+
+This script generates Kernel Density Estimation (KDE) plots for various acoustic measurements, including pitch (F0), pitch delta, spectral tilt, and syllable duration. The data for these measurements are loaded from pickle files, and the script produces both linear and logarithmic scale plots to visualize the distribution of these measurements.
+
+The script provides the following functionality:
+- `plot_kde_subplot`: Plots KDEs for a specific subplot in a grid, distinguishing between reference and synthesis data with different line styles and colors.
+- `plot_kde`: Creates KDE plots for multiple categories and saves them in both linear and logarithmic scales.
+- `plot_all_kde`: Loads data from pickle files and calls `plot_kde` to generate plots for each type of measurement.
+
+Usage:
+- Ensure the required libraries (`pickle`, `numpy`, `matplotlib`, `scipy`, and `tqdm`) are installed.
+- Place the pickle files containing the measurement data in the specified paths.
+- Run the script to generate and save KDE plots for each measurement.
+
+Dependencies:
+- `pickle` for loading data from files.
+- `numpy` for numerical operations.
+- `matplotlib` for plotting.
+- `scipy` for KDE estimation.
+- `tqdm` for progress indication during plotting.
+
+"""
+
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,15 +35,16 @@ from tqdm import tqdm
 
 def plot_kde_subplot(data_name, unit, ax, data_dict, title, linestyle='-', include_all=False):
     """
+    Plots KDEs for a specific subplot in a grid.
 
-    :param data_name:
-    :param unit:
-    :param ax:
-    :param data_dict:
-    :param title:
-    :param linestyle:
-    :param include_all:
-    :return:
+    :param data_name: The name of the data being plotted (e.g., 'f0', 'f0_delta').
+    :param unit: The unit of measurement for the data (e.g., 'Hz', 'Hz/s').
+    :param ax: The axis object on which to plot.
+    :param data_dict: A dictionary containing data arrays to plot.
+    :param title: The title of the subplot.
+    :param linestyle: The line style for plotting (default is '-') (e.g., '-' for solid, '--' for dashed).
+    :param include_all: Whether to include all sub-directories or just those in data_dict.
+    :return: None
     """
     linestyle_labels = {
         '-': 'Reference',
@@ -54,10 +83,12 @@ def plot_kde_subplot(data_name, unit, ax, data_dict, title, linestyle='-', inclu
 
 def plot_kde(data, data_name, unit):
     """
-    :param data:
-    :param data_name:
-    :param unit:
-    :return:
+    Creates KDE plots for multiple categories and saves them in both linear and logarithmic scales.
+
+    :param data: A dictionary containing the measurement data for different categories.
+    :param data_name: The name of the data being plotted (e.g., 'f0', 'f0_delta').
+    :param unit: The unit of measurement for the data (e.g., 'Hz', 'Hz/s').
+    :return: None
     """
     # Define a custom color map for distinct colors
     color_map = {
@@ -115,7 +146,7 @@ def plot_kde(data, data_name, unit):
 
     axs[1, 1].set_xlabel(f"{data_name} ({unit})")
     axs[1, 1].set_ylabel('Density')
-    axs[1, 1].set_title("Original reference with all syhtesises")
+    axs[1, 1].set_title("Original reference with all syntheses")
     axs[1, 1].grid(True)
     axs[1, 1].legend()
 
@@ -180,7 +211,7 @@ def plot_kde(data, data_name, unit):
 
     axs[1, 1].set_xlabel(f"{data_name} ({unit})")
     axs[1, 1].set_ylabel('Density')
-    axs[1, 1].set_title("Original reference with all synthesizes (Logarithmic)")
+    axs[1, 1].set_title("Original reference with all syntheses (Logarithmic)")
     axs[1, 1].grid(True)
     axs[1, 1].legend()
 
@@ -191,6 +222,11 @@ def plot_kde(data, data_name, unit):
 
 
 def plot_all_kde():
+    """
+    Loads data from pickle files and generates KDE plots for each measurement type.
+
+    :return: None
+    """
     # List of stat names and corresponding data files
     stat_files = {
         'f0': {"file": "../../f0_data.pkl", "unit": "Hz"},

@@ -1,6 +1,24 @@
 """
+Created on 31.8. 2024
 
+@author: GronlunE
+
+Description:
+This script performs text-to-speech (TTS) synthesis using a specified TTS model. It combines multiple reference audio files and text files to generate synthesized speech files.
+
+The `synthesizer` function takes reference audio files, text files, and an output directory to generate synthesized audio files where each combination of reference audio and text is processed. A progress bar provides feedback on the processing status.
+
+Usage:
+- Ensure the TTS model is correctly installed and configured.
+- Provide the directories containing reference audio files, text files, and specify an output directory.
+- The script will read text files and generate corresponding audio files based on the reference audio.
+
+Dependencies:
+- TTS library for text-to-speech synthesis.
+- tqdm for progress bar visualization.
+- Standard Python libraries (`os`, `glob`, `sys`, `tqdm`).
 """
+
 from TTS.api import TTS
 import os
 import glob
@@ -10,8 +28,13 @@ from tqdm import tqdm
 
 class SuppressPrint:
     """
+    Context manager to suppress print output temporarily.
 
+    Usage:
+    with SuppressPrint():
+        # Code that produces unwanted output
     """
+
     def __enter__(self):
         self._original_stdout = sys.stdout
         sys.stdout = open(os.devnull, 'w')
@@ -23,12 +46,13 @@ class SuppressPrint:
 
 def synthesizer(reference_audio_dir, reference_texts_dir, output_dir, file_type = "*.wav"):
     """
+    Synthesizes speech by combining reference audio files and text files.
 
-    :param reference_audio_dir:
-    :param reference_texts_dir:
-    :param output_dir:
-    :param file_type:
-    :return:
+    :param reference_audio_dir: Directory containing reference audio files.
+    :param reference_texts_dir: Directory containing text files to be synthesized.
+    :param output_dir: Directory where synthesized audio files will be saved.
+    :param file_type: The file type of the reference audio files (default is "*.wav").
+    :return: None
     """
     # Initialize TTS with your model and settings
     tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
@@ -80,9 +104,11 @@ def synthesizer(reference_audio_dir, reference_texts_dir, output_dir, file_type 
                 pbar.update(1)
 
 
+# Define paths for reference audio, text files, and output
 references = r"synthesis_stage/references"
 texts = r"synthesis_stage/texts"
 output = r"synthesis_stage/synthesized"
 file_type = "*.wav"
 
+# Call the synthesizer function
 synthesizer(references, texts, output)
