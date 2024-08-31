@@ -51,11 +51,13 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 ### Figures
 
 - **Scatter Plot:**
-  ![Scatter Plot](examples/f0_sd_mean_scatter.pdf)
+  ![Scatter Plot](examples/f0_sd_mean_scatter-1.png)
 
 - **KDE of Density:**
-  ![KDE of Density](examples/f0_kde_plot.pdf)
-  ![Logarithmic KDE](examples/f0_logarithmic_kde_plot.pdf)
+  ![KDE of Density](examples/f0_kde_plot-1.png)
+
+- **Logarithmic KDE:**
+  ![Logarithmic KDE](examples/f0_logarithmic_kde_plot-1.png)
 
 - **Radar Plot:**
-  ![Radar Plot](examples/denoised_concat_9.wav_radar_plot.pdf)
+  ![Radar Plot](examples/denoised_concat_9.wav_radar_plot-1.png)
