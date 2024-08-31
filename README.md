@@ -37,9 +37,11 @@ Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 
 ## Project description
 
-Project intention is to attempt to use a XTTS model to synthesize IDS from IDS references, even if it was not specifically designed to do be able to do so. 
-The IDS references used were of poor quality so model from https://github.com/resemble-ai/resemble-enhance was used to clean up audio, with their "denoise" and "enhance" functionalities
-Then the synthesized and reference audio had chosen relevant prosodic and quality features extracted. Figures were then drawn from the extracted statistics. Figure type currently used are scatter + ellipse fitting to mean and standart deviation, kdes from density functions and radar plots of all statistics together. Comparison base was using the Original IDS reference against the syntheses of all orginal, denoised and enhanced.
+The project aims to use an XTTS model to synthesize Infant-Directed Speech (IDS) from IDS references, even though the model was not specifically designed for this purpose. Due to the poor quality of the IDS references, the model from Resemble AI was employed to clean up the audio using their "denoise" and "enhance" functionalities.
+
+Subsequently, prosodic and quality features were extracted from both the synthesized and reference audio. The extracted statistics were then visualized using various types of figures, including scatter plots with ellipse fitting to mean and standard deviation, Kernel Density Estimates (KDEs) from density functions, and radar plots summarizing all statistics together. Comparisons were made between the original IDS reference and the syntheses of all original, denoised, and enhanced versions.
+
+
 
 ## Examples
 
