@@ -1,4 +1,4 @@
-### IDS-Synthesis-with-XTTS
+# IDS-Synthesis-with-XTTS
 Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 
 ## Installation:
@@ -34,19 +34,19 @@ Then the synthesized and reference audio had chosen relevant prosodic and qualit
 
 ## Examples
 
-# References:
+### References:
 
 Orignal IDS:
 Enhanced IDS:
 Denoised IDS:
 
-# Syntheses:
+### Syntheses:
 
 Orignal IDS:
 Enhanced IDS:
 Denoised IDS:
 
-# Figures
+### Figures
 
 Scatter:
 KDE of Density:
