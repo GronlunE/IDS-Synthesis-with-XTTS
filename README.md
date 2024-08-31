@@ -38,17 +38,45 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 [Resemble AI](https://github.com/resemble-ai/resemble-enhance) for denoise and enhanced. [Example audio source](https://www.youtube.com/watch?v=F9qS_AZCdgM)
 
-### References:
+## References:
 
-- Original IDS:
-- Enhanced IDS:
-- Denoised IDS:
+- **Original IDS:**
+  <audio controls>
+    <source src="examples/IDS_example_original.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
-### Syntheses:
+- **Enhanced IDS:**
+  <audio controls>
+    <source src="examples/IDS_example_enhanced.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
-- Original IDS:
-- Enhanced IDS:
-- Denoised IDS:
+- **Denoised IDS:**
+  <audio controls>
+    <source src="examples/IDS_example_denoised.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+## Syntheses:
+
+- **Original IDS:**
+  <audio controls>
+    <source src="examples/xtts_IDS_example_original_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Enhanced IDS:**
+  <audio controls>
+    <source src="examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+- **Denoised IDS:**
+  <audio controls>
+    <source src="examples/xtts_IDS_example_denoised_GILES_1.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
 
 ### Figures
 
