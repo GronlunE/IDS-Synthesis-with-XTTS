@@ -11,7 +11,7 @@ Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 ### ONLY EXTRACT DATA ->
 
 
-2. From .zip file (provided externally) extract the content of references into "references", synthesised into "synthesised" and texts into "texts" folders under "synthesis_stage".
+2. From the .zip file (provided externally) extract the content of references into "references", synthesised into "synthesised" and texts into "texts" folders under "synthesis_stage".
 3. Run statistics.py
 4. Run display.py
 
@@ -19,9 +19,11 @@ Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 ### Synthesize with the SAME references as I ->
 
 
-2. Extract From .zip file (provided externally) extract the content of references into "references" and texts into "texts" folder under "synthesis_stage".
+2. From the .zip file (provided externally) extract the content of references into "references" and texts into "texts" folder under "synthesis_stage".
 3. Install https://github.com/coqui-ai/TTS by following their insructions for installation. "XTTS" folder can be used to store the model(s).
 4. Run synthesizer.py
+5. Run statistics.py
+6. Run display.py
 
 
 ### Synthesize with DIFFERENT references as I ->
@@ -31,7 +33,6 @@ Analysing the IDS (Infant directed speech) cloning capabilities of a TTS model
 3. Install https://github.com/coqui-ai/TTS by following their insructions for installation. "XTTS" folder can be used to store the model(s).
 4. Run synthesizer.py
 5. ????
-6. Maybe it works.
 
 
 ## Project description
