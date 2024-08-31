@@ -40,43 +40,15 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 ## References:
 
-- **Original IDS:**
-  <audio controls>
-    <source src="examples/IDS_example_original.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
-
-- **Enhanced IDS:**
-  <audio controls>
-    <source src="examples/IDS_example_enhanced.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
-
-- **Denoised IDS:**
-  <audio controls>
-    <source src="examples/IDS_example_denoised.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+- **Original IDS:** [Play Original IDS](examples/IDS_example_original.mp4)
+- **Enhanced IDS:** [Play Enhanced IDS](examples/IDS_example_enhanced.mp4)
+- **Denoised IDS:** [Play Denoised IDS](examples/IDS_example_denoised.mp4)
 
 ## Syntheses:
 
-- **Original IDS:**
-  <audio controls>
-    <source src="examples/xtts_IDS_example_original_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
-
-- **Enhanced IDS:**
-  <audio controls>
-    <source src="examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
-
-- **Denoised IDS:**
-  <audio controls>
-    <source src="examples/xtts_IDS_example_denoised_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+- **Original IDS:** [Play Original IDS](examples/xtts_IDS_example_original_GILES_1.mp4)
+- **Enhanced IDS:** [Play Enhanced IDS](examples/xtts_IDS_example_enhanced_GILES_1.mp4)
+- **Denoised IDS:** [Play Denoised IDS](examples/xtts_IDS_example_denoised_GILES_1.mp4)
 
 ### Figures
 
