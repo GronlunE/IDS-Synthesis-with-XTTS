@@ -4,7 +4,7 @@ Analyzing the IDS (Infant-Directed Speech) cloning capabilities of a TTS model
 ## Installation:
 ### Start here
 
-1. Clone the repository and install [thetaOScillator](https://github.com/orasanen/thetaOscillator/blob/master/thetaseg.m) into the "thetaOscillator" folder and follow the instructions provided there for installation. The MATLAB version was used here. The environment variable does not contain TTS.
+1. Clone the repository and install [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master/thetaseg.m) into the "thetaOscillator" folder and follow the instructions provided there for installation. The MATLAB version was used here. The environment variable does not contain TTS.
 2. ->
 
 ### ONLY EXTRACT DATA ->
