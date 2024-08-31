@@ -41,42 +41,42 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 ## References:
 
 - **Original IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_original.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_original.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 - **Enhanced IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_enhanced.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_enhanced.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 - **Denoised IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_denoised.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/IDS_example_denoised.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 ## Syntheses:
 
 - **Original IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_original_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_original_GILES_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 - **Enhanced IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_enhanced_GILES_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 - **Denoised IDS:**
-  <audio controls>
-    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_denoised_GILES_1.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+  <video width="320" height="240" controls>
+    <source src="https://github.com/your-username/your-repo/raw/main/examples/xtts_IDS_example_denoised_GILES_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 ### Figures
 
