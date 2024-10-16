@@ -33,16 +33,3 @@ Analyzing the IDS (Infant-Directed Speech) synthesizing capabilities of a TTS mo
 The project aims to use an XTTS model to synthesize Infant-Directed Speech (IDS) from IDS references, even though the model was not specifically designed for this purpose. Due to the poor quality of the IDS references, the model from [Resemble AI](https://github.com/resemble-ai/resemble-enhance) was employed to clean up the audio using the "denoise" and "enhance" functionalities.
 
 Subsequently, prosodic and quality features were extracted from both the synthesized and reference audio. The extracted statistics were then visualized using various types of figures, including scatter plots with ellipse fitting to mean and standard deviation, Kernel Density Estimates (KDEs) from density functions, and radar plots summarizing all statistics together. Comparisons were made between the original IDS reference and the syntheses of all original, denoised, and enhanced versions.
-
-## Examples
-
-### Figures
-
-- **Scatter Plot:**
-  ![Scatter Plot](examples/f0_sd_mean_scatter-1.png)
-
-- **KDE of Density:**
-  ![KDE of Density](examples/f0_kde_plot-1.png)
-
-- **Logarithmic KDE:**
-  ![Logarithmic KDE](examples/f0_logarithmic_kde_plot-1.png)
