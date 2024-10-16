@@ -46,6 +46,3 @@ Subsequently, prosodic and quality features were extracted from both the synthes
 
 - **Logarithmic KDE:**
   ![Logarithmic KDE](examples/f0_logarithmic_kde_plot-1.png)
-
-- **Radar Plot:**
-  ![Radar Plot](examples/denoised_concat_9.wav_radar_plot-1.png)
