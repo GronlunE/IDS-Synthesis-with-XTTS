@@ -1,3 +1,45 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script processes TextGrid and audio files to extract specific audio segments based on time intervals defined in the TextGrid.
+    It focuses on the 'Phrases' tier within the TextGrid files, extracting intervals where non-empty text is present, and uses these intervals
+    to segment corresponding audio files into smaller clips. The script saves the extracted audio clips as individual WAV files with filenames
+    based on the phrase index. It processes all TextGrid files in a given root directory, looks for matching audio files in a specified
+    directory, and saves the resulting phrase audio files in a structured output directory.
+
+    The `parse_textgrid` function parses TextGrid files to extract time intervals and text from the 'Phrases' tier, ensuring only
+    non-empty text intervals are returned. The `extract_audio_segments` function extracts audio segments based on the parsed
+    intervals and exports them to the specified output directory. The `process_files` function iterates through all TextGrid files
+    in the specified directory, extracts audio segments, and organizes them into output directories based on the type of the source
+    file (e.g., 'references' or 'syntheses').
+
+Usage:
+    - Ensure the TextGrid files and corresponding audio files are located in the specified directories.
+    - Set the `textgrid_root_dir` and `audio_root_dir` to the appropriate directories for your TextGrid and audio files.
+    - Set the `output_base_dir` to the desired directory where phrase audio files will be saved.
+    - The script will process all TextGrid files, extract the audio segments based on the defined intervals, and save the audio clips
+      into structured subdirectories under `output_base_dir`.
+
+Dependencies:
+    - `os` for file and directory operations.
+    - `re` for regular expression handling to parse TextGrid files.
+    - `glob` for file searching and pattern matching.
+    - `pydub` for audio processing and exporting audio segments.
+    - `tqdm` for progress bar visualization during processing.
+
+Notes:
+    - This script assumes that the TextGrid files have a `.auto.TextGrid` extension and that corresponding audio files are in WAV format.
+    - The output directory structure will be based on the source file type (`references` or `syntheses`) and category (subdirectory name).
+    - Ensure that both TextGrid and audio files are organized in the same relative structure for correct matching.
+    - If no valid intervals are found in a TextGrid file, that file is skipped.
+    - The script handles the extraction and saving of phrases only when matching audio files are found.
+
+"""
+
+
 import os
 import re
 import glob

@@ -1,3 +1,40 @@
+"""
+This Python script generates scatter plots and overlays ellipses representing the 95% confidence intervals
+for two different sets of data: synthesized and reference data. These plots are divided into four subplots
+for each variable pair, where the synthesized data is categorized by different synthesis types (e.g.,
+'original', 'denoised', 'enhanced'), and the reference data is categorized similarly. The ellipses are
+calculated based on the covariance of the data points to represent the uncertainty in the data distribution.
+
+The main components of the code are as follows:
+
+1. **add_ellipse function**: This function calculates and overlays a 95% confidence ellipse for a set of x and y data points
+   on a given plot axis (ax). It computes the mean, covariance, and eigenvectors to draw the ellipse.
+
+2. **draw_scatter_plot function**: This function is responsible for creating four subplots:
+   - The first subplot displays synthesized data categorized by synthesis type (e.g., 'original', 'denoised', 'enhanced') with ellipses.
+   - The second subplot shows synthesized data categorized by GILES numbers, each represented with a different color.
+   - The third subplot shows reference data, again categorized by synthesis type, with ellipses.
+   - The fourth subplot combines both synthesized and reference data for each category with corresponding ellipses.
+   The function accepts various parameters, including variables for the x and y axes, as well as color maps for the different categories.
+
+3. **plot_all_scatter function**: This is the main driver function that loads the synthesized and reference data, extracts relevant
+   categories and GILES numbers, assigns colors, and then loops through predefined variable pairs (such as standard deviation
+   vs mean, min vs max) to create scatter plots for each pair using the `draw_scatter_plot` function.
+
+The generated scatter plots with ellipses are saved as PDF files in a designated output folder. This visualization can be used to
+understand the relationship between various features in both the synthesized and reference data sets.
+
+The following packages are required for execution:
+- pandas
+- matplotlib
+- numpy
+- scipy
+
+The script assumes the availability of CSV files containing synthesized and reference data with specific columns
+related to the features being analyzed (e.g., 'f0_ln_std', 'spectral_tilt_mean', etc.).
+
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse

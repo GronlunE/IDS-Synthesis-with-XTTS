@@ -1,3 +1,39 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script visualizes the statistical distribution of various features (e.g., F0, spectral tilt, syllable durations)
+    from synthesized and reference audio files using Kernel Density Estimation (KDE) plots. The data is loaded from
+    CSV files containing statistical values for different features at the phrase and clip levels.
+
+    The `load_data` function loads the CSV files containing reference and synthesized data.
+    The `prepare_data` function processes the data by extracting the relevant categories (denoised, enhanced, original)
+    and assigning colors for visualization.
+    The `plot_kde_subplot` function creates KDE plots for specific variables, comparing reference and synthesized data.
+    The `plot_all_kdes` function generates KDE plots for all relevant variables and saves them to the specified output directory.
+
+Usage:
+    - Set the file paths for the synthesized and reference data CSV files in `synthesized_file` and `references_file`.
+    - Set the output directory where the KDE plots will be saved in `output_dir`.
+    - The script will process the data, generate KDE plots for various features, and save them as PDF files in the output directory.
+
+Dependencies:
+    - `numpy` for numerical calculations and array operations.
+    - `pandas` for data manipulation and handling DataFrames.
+    - `matplotlib` for creating and saving plots.
+    - `scipy.stats` for Kernel Density Estimation (KDE).
+    - `os` for directory and file operations.
+
+Notes:
+    - The script expects CSV files for reference and synthesized data, with columns for each feature (e.g., `f0_log_std`, `spectral_tilt_mean`).
+    - The KDE plots compare data across different categories such as 'original', 'denoised', and 'enhanced' for both reference and synthesized audio.
+    - The generated plots will show the statistical distribution of each feature for reference and synthesized data, helping to visualize differences and trends.
+
+"""
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,3 +1,54 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script processes reference and synthesized audio files to calculate various statistics at both the phrase and clip levels.
+    The statistics are extracted from `.mat` files containing data on fundamental frequency (f0), spectral tilt, syllable durations,
+    and f0 deltas for each phrase in the audio files. The script calculates mean, standard deviation, percentile ranges, and log-transformed
+    values for these features and aggregates them at both the phrase and clip levels. The resulting statistics are then saved to CSV files.
+
+    The `create_dataframe` function converts the dictionary of statistics into a Pandas DataFrame. The `save_to_csv` function handles
+    the saving of the statistics DataFrame into a CSV file. The `calculate_relevant_statistics` function computes various statistical
+    measures for the provided data, including handling log transformations and delta data for specific features. The `main` function loads
+    the `.mat` file, processes the reference and synthesized files, calculates the relevant statistics, and exports them to CSV files.
+
+    The script processes reference and synthesized audio files in subdirectories of a root directory, loads corresponding data from a
+    `.mat` file, and handles the extraction of statistics for each phrase. The statistics for each phrase are then aggregated at the
+    clip level, and both sets of statistics (reference and synthesized) are saved to separate CSV files.
+
+Usage:
+    - Set the following directory paths:
+      - `REF_DIR`: Path to the root directory containing reference audio files.
+      - `SYNTH_DIR`: Path to the root directory containing synthesized audio files.
+      - `REF_PHRASE_DIR`: Path to the directory containing reference phrase audio files.
+      - `SYNTH_PHRASE_DIR`: Path to the directory containing synthesized phrase audio files.
+      - `MAT_INPUT`: Path to the `.mat` file containing the feature data.
+      - `CSV_OUTPUT_DIR`: Directory where the resulting CSV files will be saved.
+    - Ensure that `.wav` files are organized in subdirectories (`original`, `denoised`, `enhanced`) within `REF_DIR` and `SYNTH_DIR`.
+    - The script will load the `.mat` data and calculate statistics for each phrase in the reference and synthesized audio files.
+    - The resulting statistics will be saved to two separate CSV files: "references.csv" and "syntheses.csv".
+
+Dependencies:
+    - `numpy` for numerical calculations and array operations.
+    - `pandas` for creating and saving dataframes.
+    - `scipy.io.loadmat` for loading `.mat` files.
+    - `os` for file and directory operations.
+    - `tqdm` for showing progress bars during file processing.
+
+Notes:
+    - This script assumes that the `.mat` file follows a specific structure (with keys like 'references' and 'syntheses') and contains data
+      for the features (e.g., 'f0', 'f0_delta', 'syllable_durations', etc.) at both the phrase and clip levels.
+    - The script handles empty or zero data in the `.mat` file by skipping those entries and printing a count of how many empty data
+      points were encountered.
+    - The calculated statistics are saved as CSV files with columns for each feature and calculated statistic (mean, standard deviation,
+      percentiles, etc.).
+    - It processes audio files in the "original", "denoised", and "enhanced" subdirectories of `REF_DIR` and `SYNTH_DIR`.
+
+"""
+
+
 import numpy as np
 import pandas as pd
 from scipy.io import loadmat

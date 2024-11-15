@@ -1,3 +1,48 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script generates scatter plots comparing reference and synthesized data for various audio features.
+    The scatter plots visualize the relationship between reference values (for enhanced and original references)
+    and synthesized values (for enhanced syntheses) across several audio features. The analysis is performed for
+    features such as pitch, spectral tilt, and syllable duration statistics. The script calculates Pearson correlation
+    coefficients and fits a linear regression line to assess the correlation between reference and synthesized data.
+
+    The main functionalities of the script include:
+    - Loading synthesized and reference data from CSV files.
+    - Extracting relevant categories (e.g., "enhanced", "original") and assigning appropriate colors for GILES numbers.
+    - Creating scatter plots for each feature in the `variables_list`, comparing enhanced references vs. enhanced syntheses
+      and original references vs. enhanced syntheses.
+    - Annotating the plots with linear fit lines and Pearson correlation values.
+    - Saving the scatter plots as PDF files in the specified output directory.
+
+Usage:
+    - Set the input file paths for the synthesized data (`syntheses.csv`) and reference data (`references.csv`).
+    - Define the output directory (`OUTPUT_DIR`) where the PDF plots will be saved.
+    - The script loops through the variables listed in `variables_list`, generating scatter plots for each feature.
+    - The generated plots will be saved as PDF files in the output directory.
+
+Dependencies:
+    - `pandas` for data manipulation and handling CSV files.
+    - `matplotlib` for plotting scatter plots and saving them as PDFs.
+    - `numpy` for numerical operations and generating linear fit lines.
+    - `scipy.stats` for Pearson correlation and linear regression.
+    - `os` for file and directory operations.
+    - `tqdm` for progress bar display during processing.
+
+Notes:
+    - The script expects CSV files containing columns for different audio features, with columns named similarly to those
+      listed in the `variables_list`.
+    - It processes GILES numbers (from 1 to 10) and assigns distinct colors for each GILES number to help visualize individual
+      points in the scatter plots.
+    - The output plots will show the comparison between reference and synthesized data, and will include Pearson correlation
+      coefficients and linear fit lines.
+
+"""
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse

@@ -1,3 +1,38 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script processes speech data by extracting various statistical features from reference and synthesized audio files.
+    It computes pitch, F0 (fundamental frequency), spectral tilt, and syllable durations for each file, storing the results in a dictionary structure.
+    The script processes the audio files, organizes the extracted features by base file and phrase, and then saves the results in the .mat file format.
+
+    The `process_files` function processes the audio files in specified directories, computes the desired statistics,
+    and stores them in a dictionary under the corresponding base file and phrase. A progress bar is displayed during file processing.
+
+    The `collect` function calls the `process_files` function for both reference and synthesized files, then saves the extracted features to a .mat file.
+
+Usage:
+    - Ensure the necessary audio files are located in the `references` and `syntheses` directories, along with the corresponding phrases.
+    - Set the directories and paths according to your project setup.
+    - The script will process the audio files, compute statistical features, and save them in a `.mat` file under a top-level key "DATA".
+
+Dependencies:
+    - `scipy` for saving and loading MATLAB files.
+    - `librosa` for audio processing and feature extraction.
+    - `parselmouth` for pitch extraction and analysis.
+    - `tqdm` for progress bar visualization.
+    - Custom functions from the `data_extraction_functions` module for feature extraction (e.g., pitch, spectral tilt, syllable durations).
+    - Standard Python libraries (`os`, `glob`).
+
+Notes:
+    - The target sampling rate for all audio files is set to 16 kHz.
+    - The script assumes that audio files are in `.wav` format and follow a specific naming convention (e.g., `xtts_<base_file>_phrase_<number>.wav`).
+    - The extracted features are saved under the "DATA" key in the output .mat file.
+
+"""
+
 from scipy.io import savemat, loadmat
 from data_extraction_functions import *
 import os

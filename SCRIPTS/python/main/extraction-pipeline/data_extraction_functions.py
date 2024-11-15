@@ -1,3 +1,46 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script provides functions for extraction and analyzing pitch (F0) and spectral characteristics, such as spectral tilt, F0 delta, and syllable durations. It provides various functions for extracting statistical features from audio files, including:
+
+    - F0 statistics (pitch values above a threshold).
+    - Spectral tilt calculation from the audio waveform and pitch.
+    - F0 delta (change) statistics, including linear regression to compute the tilt.
+    - Syllable duration statistics based on audio timing and pitch analysis.
+    - Peak detection and change-based thresholding for analyzing F0 extrema.
+
+    The functions are used for audio feature extraction, analysis of pitch contours, and determining changes in pitch over time for speech data.
+
+Functions:
+    - `get_f0_statistics(pitch)`: Extracts and returns F0 values above 100 Hz from a pitch object.
+    - `get_spectral_tilt_statistics(y, pitch, sr)`: Calculates the spectral tilt for an audio signal `y` using its pitch and sample rate `sr`.
+    - `get_f0_delta_statistics(pitch, window=5, step=1)`: Computes the mean and standard deviation of the tilt (slope) of log-transformed F0 values over a sliding window.
+    - `get_syllable_duration_statistics(filepath, all_syldurs)`: Integrates syllable duration data with pitch analysis to determine valid syllable durations based on the F0 values.
+    - `get_F0_delta_peakdet_thr_line(filepath, target_sr=16000)`: Computes F0 delta statistics based on the fitted line between extrema in the pitch contour.
+    - `get_F0_delta_peakdet_thr_change(filepath, target_sr=16000, change_threshold=0.02)`: Performs F0 delta analysis using a change threshold to filter significant pitch changes, fitting lines between extrema.
+
+Usage:
+    - Input: Audio file(s) in `.wav` format, with appropriate sample rates (typically 16 kHz).
+    - These functions extract various pitch-related features and store them as arrays or lists, which can be used for further analysis.
+    - `get_syllable_duration_statistics` also requires syllable duration data (in `all_syldurs`), which maps syllables to their corresponding time boundaries.
+
+Dependencies:
+    - `parselmouth`: For pitch extraction using Praat.
+    - `librosa`: For audio processing and pitch tracking (F0 extraction).
+    - `numpy`: For numerical computations.
+    - `scipy`: For signal processing (e.g., peak detection and linear regression).
+    - Standard Python libraries (`os`).
+
+Notes:
+    - This script assumes that the input audio files are in `.wav` format, sampled at 16 kHz.
+    - Syllable duration data (`all_syldurs`) is assumed to be pre-loaded and provided as a dictionary structure.
+    - For `get_F0_delta_peakdet_thr_line` and `get_F0_delta_peakdet_thr_change`, change thresholds can be adjusted to filter extreme F0 shifts.
+
+"""
+
 import parselmouth
 from parselmouth.praat import call
 import librosa

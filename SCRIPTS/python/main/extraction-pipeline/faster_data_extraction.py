@@ -1,3 +1,41 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script processes speech data by extracting various statistical features from reference and synthesized audio files.
+    It computes pitch, F0 (fundamental frequency), spectral tilt, and syllable durations for each file, storing the results in a dictionary structure.
+    The script processes the audio files, organizes the extracted features by base file and phrase, and then saves the results in CSV files for further analysis.
+
+    The `calculate_relevant_statistics` function computes the statistical features such as mean, standard deviation, and percentiles
+    for each feature (e.g., F0, syllable durations) and logs them if required. It can also handle delta values (differences between frames)
+    and logarithmic transformations of the data. The `create_dataframe` function takes the computed statistics and generates a Pandas dataframe,
+    which is then saved into CSV files using the `save_to_csv` function.
+
+    The script processes both reference and synthesized speech files, and it handles each type of file separately, aggregating statistics
+    at both the clip and phrase levels. It ensures that empty or invalid data is skipped during processing.
+
+Usage:
+    - Ensure the necessary audio files are located in the `references` and `syntheses` directories, along with the corresponding phrases.
+    - Set the directories and paths according to your project setup.
+    - The script will process the audio files, compute statistical features, and save the results into `references.csv` and `syntheses.csv`.
+
+Dependencies:
+    - `numpy` for numerical operations.
+    - `pandas` for data manipulation and CSV export.
+    - `scipy` for loading MATLAB files.
+    - `tqdm` for progress bar visualization.
+    - Standard Python libraries (`os`, `glob`, etc.).
+
+Notes:
+    - The script assumes that audio files are in `.wav` format.
+    - The processed statistics include both phrase-level and clip-level features.
+    - The target output directory for the CSV files is set in `CSV_OUTPUT_DIR`.
+    - Empty or invalid data will be skipped during processing, and a count of such occurrences is printed.
+
+"""
+
 import numpy as np
 import pandas as pd
 from scipy.io import loadmat
