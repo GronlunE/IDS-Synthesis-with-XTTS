@@ -4,29 +4,18 @@ Analyzing the IDS (Infant-Directed Speech) synthesizing capabilities of a TTS mo
 ## Installation:
 ### Start here
 
-1. Clone the repository and install [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master) into the "thetaOscillator" folder and follow the instructions provided there for installation. The MATLAB version was used here. The environment variable does not contain TTS.
-2. Matlabengine is required to one function to use [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master), and that should be installed according to [MATLAB Engine for Python Installation Instructions](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html). Other options would be to modify 'get_syllable_duration_statistics' function to work without this or simply load precalculated values.
+Clone the repository and install [thetaOscillator](https://github.com/orasanen/thetaOscillator/blob/master) into the "thetaOscillator" folder and follow the instructions provided there for installation. The MATLAB version was used here.
 
-### ONLY EXTRACT DATA ->
+### Extract data from existing set of synthesis and their references ->
 
-1. From the provided .zip file, extract the contents of the references into the "references" folder, synthesised audio into the "synthesised" folder, and texts into the "texts" folder under "synthesis_stage".
-2. Run `statistics.py`
-3. Run `display.py`
+1. From the provided .zip file, extract the contents into STAGE/synthesis. References go into references and syntheses go to output. After, follow the pipeline_readme.txt in SCRIPTS/python/main/extraction-pipeline.
 
-### Synthesize with the SAME references as I ->
+### Synthesize and extract statistics->
 
 1. From the provided .zip file, extract the contents of the references into the "references" folder and texts into the "texts" folder under "synthesis_stage".
 2. Install [Coqui TTS](https://github.com/coqui-ai/TTS) by following their installation instructions. The "XTTS" folder can be used to store the model(s).
 3. Run `synthesizer.py`
-4. Run `statistics.py`
-5. Run `display.py`
-
-### Synthesize with DIFFERENT references as I ->
-
-1. Extract your references into the "original" folder under "synthesis_stage/references" and texts into the "texts" folder under "synthesis_stage".
-2. Install [Coqui TTS](https://github.com/coqui-ai/TTS) by following their installation instructions. The "XTTS" folder can be used to store the model(s).
-3. Run `synthesizer.py`
-4. ????
+4. Follow the pipeline_readme.txt in SCRIPTS/python/main/extraction-pipeline.
 
 ## Project Description
 
