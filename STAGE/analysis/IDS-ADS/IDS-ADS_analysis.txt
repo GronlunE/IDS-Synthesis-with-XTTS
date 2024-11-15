@@ -1,0 +1,2 @@
+A .mat files will be produced here after syllable extraction and data collection and after those are processed
+there will also be .csv files for references and syntheses containing various statistics.

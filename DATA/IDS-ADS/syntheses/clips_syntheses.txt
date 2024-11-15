@@ -1,0 +1,1 @@
+One can store their references here before adding them to the stage here.

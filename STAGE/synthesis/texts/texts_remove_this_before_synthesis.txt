@@ -1,0 +1,1 @@
+In this directory one puts transcripts which to use for the synthesis.
