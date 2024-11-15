@@ -1,3 +1,43 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script performs Gaussian Mixture Model (GMM) clustering on two datasets: synthesized and reference speech data.
+    It processes statistical features such as f0 (fundamental frequency), spectral tilt, and syllable durations,
+    and groups the data into clusters based on these features. The results of the clustering, including file distribution
+    across clusters and Pearson correlation statistics, are saved to a text file and visualized in a 2D scatter plot.
+
+    The `perform_clustering` function takes a dataset, standardizes the data, performs GMM clustering, and visualizes
+    the results with PCA reduction for easy inspection. The script generates subplots for both enhanced and original versions
+    of the datasets and saves the clustering visualization to a PDF file.
+
+Usage:
+    - Ensure that the datasets (`IDS-ADS_syntheses.csv` and `IDS-ADS_references.csv`) are available in the specified
+      file paths.
+    - The script filters data based on file name containing specific labels (e.g., "enhanced", "original") and excludes
+      files with "denoised" in the name.
+    - The script will generate 2D scatter plots of clustered data and save them in a PDF file. It also produces a detailed
+      clustering report in a text file, which includes the counts and percentages of IDS and ADS files in each cluster.
+
+Dependencies:
+    - `pandas` for data handling and processing.
+    - `numpy` for numerical operations.
+    - `matplotlib` for visualizing the clustering results.
+    - `scikit-learn` for clustering (GaussianMixture) and dimensionality reduction (PCA).
+    - `scipy.stats` for calculating Pearson correlation between selected features.
+    - Standard Python libraries (`os` for file handling).
+
+Notes:
+    - The number of clusters is set to 2 by default but can be adjusted within the script.
+    - Results are saved to both a text file (`clustering_results.txt`) and a PDF file (`clustering_results.pdf`).
+    - Pearson correlation is computed for the first two selected features in the dataset, and the results are saved in the
+      text file.
+
+"""
+
+
 import os
 
 # Set the number of threads to avoid memory leak warning

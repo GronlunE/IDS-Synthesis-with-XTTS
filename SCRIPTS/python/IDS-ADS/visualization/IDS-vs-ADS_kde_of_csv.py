@@ -1,3 +1,34 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script processes speech synthesis data by generating Kernel Density Estimation (KDE) plots for various statistical features extracted from both synthesized and reference speech files. The features include pitch (F0), spectral tilt, and syllable durations, with data categorized by different processing methods (original, denoised, enhanced) and speaker.
+    The script compares these features across different categories (ADS, IDS) for each speaker and generates KDE plots for individual speakers as well as combined across all speakers. The results are saved as PDF files in a specified output directory.
+
+    The `create_kde_of_csv_stats` function is the entry point of the script. It loads the speech data from CSV files, prepares the data by extracting relevant information, and then plots KDEs for various statistical variables. Two types of plots are generated: one for individual speakers and another for all speakers combined.
+
+Usage:
+    - Ensure that the necessary CSV files containing synthesized and reference speech data are provided at the specified file paths.
+    - Set the appropriate paths for input data (CSV files) and output directory for saving the KDE plots.
+    - The script will automatically generate and save KDE plots for different speech features for both individual speakers and all speakers combined.
+
+Dependencies:
+    - `pandas` for data manipulation and handling CSV files.
+    - `numpy` for numerical operations.
+    - `matplotlib` for plotting KDE graphs.
+    - `scipy` for Kernel Density Estimation (KDE) calculations.
+    - `os` for file path management.
+
+Notes:
+    - The script assumes that the input CSV files are structured with columns containing the file name and the corresponding statistical feature values.
+    - KDE plots are generated for the following features: F0 Standard Deviation, F0 Mean, Spectral Tilt, and Syllable Durations, across both reference and synthesized data.
+    - The plots are saved as PDF files in the specified `OUTPUT_DIR` under filenames that correspond to the speaker and the variable being plotted.
+
+"""
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

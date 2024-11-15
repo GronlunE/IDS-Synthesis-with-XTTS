@@ -1,3 +1,66 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script generates scatter plots to compare synthesized and reference speech data across multiple categories
+    (original, denoised, enhanced) for various speech features. It processes two datasets: synthesized and reference data
+    with different features (e.g., f0, spectral tilt, syllable durations) and creates scatter plots for each speaker,
+    comparing the reference and synthesized data across different feature pairs.
+    The script also adds ellipses representing the 95% confidence intervals for the data distributions and computes
+    various statistical relationships between the features using the `matplotlib` library for plotting and `numpy`
+    for numerical computations.
+
+    The `add_ellipse` function is used to draw ellipses around the data points for a given category, representing the
+    95% confidence interval using a chi-squared distribution. This is helpful for visualizing data spread and correlation.
+
+    The `draw_subplot` function creates scatter plots for different feature combinations for each speaker. It compares
+    synthesized and reference data, grouped by different categories such as original, denoised, and enhanced data.
+    The function also ensures proper labeling, axis formatting, and legend creation for clarity.
+
+    The `plot_data_for_speaker` function generates scatter plots for each speaker individually and saves the results
+    as PDF files. For each speaker, the script generates 4 subplots for the different categories: Original Data,
+    Denoised Data, Enhanced Data, and Original vs Enhanced.
+
+    The `plot_all_data` function generates scatter plots for each speaker by iterating over the list of speakers and
+    calling the `plot_data_for_speaker` function.
+
+    The `plot_all_data_combined` function generates combined scatter plots for all speakers, comparing the reference
+    and synthesized data across the same feature pairs.
+
+    Key Features:
+    - Generates scatter plots comparing reference and synthesized data for speech features across multiple categories.
+    - Adds ellipses representing the 95% confidence intervals for each data distribution.
+    - Handles both individual speaker and combined data plots.
+    - Saves the generated plots in PDF format with the appropriate speaker or category label.
+
+Usage:
+    - Ensure that the datasets (`IDS-ADS_syntheses.csv` and `IDS-ADS_references.csv`) are available in the specified
+      directories.
+    - This script processes data for individual speakers and generates scatter plots comparing different speech features
+      between reference and synthesized speech.
+    - The scatter plots are grouped by category (Original, Denoised, Enhanced) and saved as PDF files in the output directory.
+    - The script supports multiple feature comparisons and can be customized with new variables as required.
+
+Dependencies:
+    - `pandas` for data handling and processing.
+    - `numpy` for numerical operations and matrix manipulations.
+    - `matplotlib` for plotting the scatter plots and ellipses.
+    - `scipy.stats` for chi-squared distributions used in the ellipse calculation.
+    - `os` for file and directory operations.
+
+Notes:
+    - The script uses a color map to differentiate between various data categories: 'original', 'denoised', and 'enhanced'
+      for both reference and synthesized data.
+    - Each feature pair to be plotted is defined in the `variables` dictionary, which can be expanded to include new
+      feature comparisons.
+    - The script currently generates scatter plots for 2D data pairs, where each pair consists of an X and Y feature.
+    - Results are saved to the specified `SCATTER_OUTPUT_DIR` in PDF format, with filenames reflecting the speaker and feature combination.
+
+"""
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
@@ -9,6 +72,7 @@ import os
 SYNTHESIZED_FILE = r"G:\Research\XTTS_Test\DATA\IDS-ADS\IDS-ADS_syntheses.csv"
 REFERENCES_FILE = r"G:\Research\XTTS_Test\DATA\IDS-ADS\IDS-ADS_references.csv"
 SCATTER_OUTPUT_DIR = r"G:\Research\XTTS_Test\DATA\IDS-ADS\figures\scatter\other"
+
 
 # Function to add ellipses for 95% confidence interval
 def add_ellipse(ax, x_data, y_data, color, linestyle, label=None):

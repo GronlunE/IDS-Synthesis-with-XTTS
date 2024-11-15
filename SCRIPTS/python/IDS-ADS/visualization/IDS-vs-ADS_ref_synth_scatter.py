@@ -1,3 +1,56 @@
+"""
+Created on 15.11.2024
+
+@author: GronlunE
+
+Description:
+    This script generates scatter plots comparing synthesized speech data and reference data for various speech features.
+    It processes two datasets: synthesized and reference speech data, extracting variables such as f0 (fundamental frequency),
+    spectral tilt, and syllable durations. The script creates scatter plots for each speaker, comparing the synthesized data
+    against the reference data. The data is grouped by category (IDS vs ADS) and feature type (Enhanced vs Original vs Enhanced).
+    The script also computes the Pearson correlation and linear regression for each comparison (IDS vs ADS), visualizing
+    the results with linear fit lines for each group.
+
+    The `draw_ref_synth_scatter_for_speaker` function creates scatter plots for each speaker, comparing reference and
+    synthesized data for a given feature. The plots are grouped into two categories:
+    - Enhanced vs Enhanced
+    - Original vs Enhanced
+
+    The script uses a color map based on GILES numbers for differentiating synthesized data points and displays them in different
+    markers for ADS and IDS data types. The resulting plots are saved as PDF files for each speaker and feature combination.
+
+    The `draw_combined_ref_synth_scatter` function generates combined scatter plots for all speakers' data, visualizing
+    Enhanced vs Enhanced and Original vs Enhanced comparisons in a similar manner.
+
+    Key Features:
+    - Generates scatter plots for Enhanced vs Enhanced and Original vs Enhanced data comparisons.
+    - Computes Pearson correlation coefficients and linear fits for both IDS and ADS data points.
+    - Visualizes GILES numbers with distinct colors.
+    - Saves plots to a specified directory in PDF format.
+
+Usage:
+    - Ensure that the datasets (`IDS-ADS_syntheses.csv` and `IDS-ADS_references.csv`) are available in the specified
+      file paths.
+    - This script processes data for individual speakers and generates scatter plots comparing different speech features
+      between reference and synthesized speech.
+    - The script saves the scatter plots as PDF files in the specified `OUTPUT_DIR`.
+
+Dependencies:
+    - `pandas` for data handling and processing.
+    - `numpy` for numerical operations.
+    - `matplotlib` for plotting the scatter plots and fitting lines.
+    - `scipy.stats` for Pearson correlation and linear regression.
+    - `tqdm` for progress bar during processing (optional, used for looping through speakers).
+
+Notes:
+    - The script uses GILES number-based color mapping for distinguishing between different synthesized data.
+    - The correlation coefficients and regression lines for both IDS and ADS data are displayed in the scatter plots.
+    - Results are saved to PDF files in the specified output directory with filenames indicating the speaker and variable.
+    - The script currently processes the variables defined in the `variables_list`.
+
+"""
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
